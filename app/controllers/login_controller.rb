@@ -15,4 +15,25 @@ class LoginController < ApplicationController
        end
   end
 
+  def ingresar
+      @autor = Autor.find_by_nombreusuario params[:nombreusuario]
+      if @autor.nil?
+	  redirect_to login_path, :notice => "El nombre de usuario no es valido!" 
+      else
+	  session[:autor_id] = @autor.id
+ 	  redirect_to articulos_path
+      end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
 end
