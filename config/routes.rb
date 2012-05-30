@@ -8,6 +8,7 @@ ATAGSummitJS::Application.routes.draw do
   post "ingresar" => "login#ingresar"
   root :to => "home#index"
   get "salir" => "login#salir"
+
   resources :autores
   resources :articulos
 

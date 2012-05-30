@@ -1,25 +1,19 @@
-<h1>Listado de articulos</h1>
-
-<table>
-  <tr>
-    <th>Titulo</th>
-    <th>Cuerpo</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1 class="formato_articulos_t" >Listado de mis articulos</h1>
+<%= link_to 'Nuevo Articulo', new_articulo_path %>
 
 <% @articulos.each do |articulo| %>
-  <tr>
-    <td><%= articulo.titulo %></td>
-    <td><%= articulo.cuerpo %></td>
-    <td><%= link_to 'Ver', articulo %></td>
-    <td><%= link_to 'Editar', edit_articulo_path(articulo) %></td>
-    <td><%= link_to 'Eliminar', articulo, confirm: 'Confirma?', method: :delete %></td>
-  </tr>
+<div class="formato_articulos">
+	<p id="fecha"><%= articulo.created_at.strftime("%A, %h %d %Y, %H:%M hs") %></p>
+	<p id="titulo"><%= articulo.titulo %></p>
+	<p><%= articulo.cuerpo %></p><br />
+	<p id="acciones">
+          <%= link_to 'Ver', articulo %> |
+	  <%= link_to 'Editar', edit_articulo_path(articulo) %> |
+ 	  <%= link_to 'Eliminar', articulo, confirm: 'Confirma?', method: :delete %></p>
+</div>
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'Nuevo Articulo', new_articulo_path %>
+
+
+

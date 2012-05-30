@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
    <div>
 	<% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -15,14 +16,18 @@
 
    
    <div class="formato_autor">
+      <%= link_to "Home", root_path %>|
       <% if log_autor? %>
             <%= "Hola #{@log_autor.nombre} #{@log_autor.apellido}!"%>
             <%= link_to "(salir)", salir_path %>
+            <%= link_to "Mis Articulos", articulos_path %>
      <% else %>
 	 <%= link_to "Ingresar", login_path %> si tiene una cuenta, o
 	 <%= link_to "Registrar", registro_path %> para crear una!
      <% end %>
    </div>
+
+
 
    <%= yield %>
 </body>
