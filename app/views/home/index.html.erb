@@ -1,5 +1,6 @@
-<h1>Flash Informativo</h1>
-<p>Esto es lo que esta pasando en el mundo!!</p>
+<h1 class="formato_articulos_t">Flash Informativo</h1>
+<p class="formato_articulos_r">Esto es lo que esta pasando en el mundo!!</p>
+
 <% @articulos.each do |articulo| %>
 <div class="formato_articulos ">
  <p id="fecha"><%= articulo.created_at.strftime("%A, %h %d %Y, %H:%M hs") %></p>

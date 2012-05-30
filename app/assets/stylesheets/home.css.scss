@@ -4,9 +4,9 @@
 
 .formato_articulos{
 
-	background-color: whitesmoke;
+	background-color: #EEFF9F;
 	border-bottom-style: solid;
-	border-color: gray;
+	border-color: #7E8F00;
  
 	#fecha {	
 		color: gray;
@@ -16,11 +16,26 @@
 	}
 
 	#titulo {	
-		margin-top: -30px;
-		margin-bottom: 0px;
+		margin-top: -20px;
+		margin-bottom: -10px;
 		font-size: 170%;
 		font-weight: bold;
 	}    
+
+}
+
+.formato_articulos_t {
+
+     color: #008508;
+     font-size: 270%;
+     text-align: center
+}
+
+.formato_articulos_r {
+
+     color: #008F65;
+     font-size: 190%;
+     text-align: center
 
 }
 
