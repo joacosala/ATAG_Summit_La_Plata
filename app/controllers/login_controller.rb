@@ -8,7 +8,10 @@ class LoginController < ApplicationController
        if @autor.save
 	     redirect_to login_path
        else
-	     redirect_to signup_path
+	     redirect_to registro_path, 
+             :notice => "No se pudo registrar!!.  
+                         El nombre de usuario y primer nombre son requeridos, o el  
+                         nombre de usuario ya existe"
        end
   end
 
