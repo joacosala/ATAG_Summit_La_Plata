@@ -1,0 +1,19 @@
+.formatted_article {
+
+	background-color: whitesmoke;
+	border-bottom-style: solid;
+	border-color: gray;
+	
+	#date {	
+		color: gray;
+		font-style: italic;
+		font-size: 85%;
+		text-align: right;
+	}
+
+	#title {	
+		font-size: 170%;
+		font-weight: bold;
+	}
+}
+

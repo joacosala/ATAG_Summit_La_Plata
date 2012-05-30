@@ -1,9 +1,12 @@
 ATAGSummitJS::Application.routes.draw do
 
+  get "home/index"
+
   get "login" => "login#login"
   get "registro" => "login#registro"
   post "registrar" => "login#registrar"
   post "ingresar" => "login#ingresar"
+  root :to => "home#index"
   resources :autores
   resources :articulos
 
