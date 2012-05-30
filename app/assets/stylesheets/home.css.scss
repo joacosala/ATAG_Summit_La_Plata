@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .formato_articulos{
 
 	background-color: #EEFF9F;
@@ -21,21 +22,24 @@
 		font-size: 170%;
 		font-weight: bold;
 	}    
-
 }
 
 .formato_articulos_t {
 
      color: #008508;
      font-size: 270%;
-     text-align: center
+     text-align: center;
 }
 
 .formato_articulos_r {
 
      color: #008F65;
      font-size: 190%;
-     text-align: center
+     text-align: center;
+}
 
+.formato_autor {
+     font-size: 90%;
+     text-align: right;
 }
 
