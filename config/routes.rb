@@ -1,5 +1,11 @@
 ATAGSummitJS::Application.routes.draw do
+
+  get "login" => "login#login"
+  get "registro" => "login#registro"
+  post "registrar" => "login#registrar"
+  resources :autores
   resources :articulos
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
