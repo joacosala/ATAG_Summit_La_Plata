@@ -17,6 +17,7 @@
    <div class="formato_autor">
       <% if log_autor? %>
             <%= "Hola #{@log_autor.nombre} #{@log_autor.apellido}!"%>
+            <%= link_to "(salir)", salir_path %>
      <% else %>
 	 <%= link_to "Ingresar", login_path %> si tiene una cuenta, o
 	 <%= link_to "Registrar", registro_path %> para crear una!

@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+
   def registro
          @autor = Autor.new
   end
@@ -15,6 +16,7 @@ class LoginController < ApplicationController
        end
   end
 
+
   def ingresar
       @autor = Autor.find_by_nombreusuario params[:nombreusuario]
       if @autor.nil?
@@ -24,6 +26,13 @@ class LoginController < ApplicationController
  	  redirect_to root_path
       end
   end
+
+
+  def salir
+    session[:autor_id] = nil
+    redirect_to root_path
+  end
+
 
 
 
