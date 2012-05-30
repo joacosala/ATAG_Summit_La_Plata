@@ -2,8 +2,7 @@ class ArticulosController < ApplicationController
   # GET /articulos
   # GET /articulos.json
   def index
-    @articulos = Articulo.all
-
+    @articulos = Articulo.where(:autor_id => session[:autor_id]).order("created_at DESC")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articulos }
@@ -42,13 +41,18 @@ class ArticulosController < ApplicationController
   def create
     @articulo = Articulo.new(params[:articulo])
 
-    respond_to do |format|
-      if @articulo.save
-        format.html { redirect_to @articulo, notice: 'Articulo was successfully created.' }
-        format.json { render json: @articulo, status: :created, location: @articulo }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @articulo.errors, status: :unprocessable_entity }
+    if session[:autor_id].nil?
+	redirect_to login_path
+    else
+      @articulo.autor_id = session[:autor_id]  
+      respond_to do |format|
+        if @articulo.save
+         format.html { redirect_to @articulo, notice: 'Articulo creado exitosamente.' }
+         format.json { render json: @articulo, status: :created, location: @articulo }
+        else
+         format.html { render action: "new" }
+         format.json { render json: @articulo.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
