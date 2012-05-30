@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @articulo.titulo %>
+</p>
+
+<p>
+  <b>Cuerpo:</b>
+  <%= @articulo.cuerpo %>
+</p>
+
+
+<%= link_to 'Editar', edit_articulo_path(@articulo) %> |
+<%= link_to 'Volver', articulos_path %>
