@@ -21,7 +21,7 @@ class LoginController < ApplicationController
 	  redirect_to login_path, :notice => "El nombre de usuario no es valido!" 
       else
 	  session[:autor_id] = @autor.id
- 	  redirect_to articulos_path
+ 	  redirect_to root_path
       end
   end
 

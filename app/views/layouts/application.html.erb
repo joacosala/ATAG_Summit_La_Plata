@@ -12,7 +12,17 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
 	<% end %>
    </div>
-  
+
+   
+   <div class="formato_autor">
+      <% if log_autor? %>
+            <%= "Hola #{@log_autor.nombre} #{@log_autor.apellido}!"%>
+     <% else %>
+	 <%= link_to "Ingresar", login_path %> si tiene una cuenta, o
+	 <%= link_to "Registrar", registro_path %> para crear una!
+     <% end %>
+   </div>
+
    <%= yield %>
 </body>
 </html>
