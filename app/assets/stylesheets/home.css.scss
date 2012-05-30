@@ -1,0 +1,26 @@
+// Place all the styles related to the Login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.formato_articulos{
+
+	background-color: whitesmoke;
+	border-bottom-style: solid;
+	border-color: gray;
+ 
+	#fecha {	
+		color: gray;
+		font-style: italic;
+		font-size: 85%;
+		text-align: right;
+	}
+
+	#titulo {	
+		margin-top: -30px;
+		margin-bottom: 0px;
+		font-size: 170%;
+		font-weight: bold;
+	}    
+
+}
+
