@@ -1,2 +1,15 @@
-<h1>Login#login</h1>
-<p>Find me in app/views/login/login.html.erb</p>
+<h1>Ingreso</h1>
+<p>Por favor ingrese su nombre de usuario</p>
+
+<%= form_tag "/ingresar" do %>
+<p>
+  <b>Nombre de usuario</b><br />
+  <%= text_field_tag :nombreusuario %>
+</p>
+<p>
+   <%= submit_tag "Ingresar!!" %>
+</p>
+<% end %>
+
+
+

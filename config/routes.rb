@@ -3,6 +3,7 @@ ATAGSummitJS::Application.routes.draw do
   get "login" => "login#login"
   get "registro" => "login#registro"
   post "registrar" => "login#registrar"
+  post "ingresar" => "login#ingresar"
   resources :autores
   resources :articulos
 
