@@ -1,5 +1,7 @@
 ATAGSummitJS::Application.routes.draw do
 
+  resources :categories
+
   resources :categoria
 
   get "home/index"

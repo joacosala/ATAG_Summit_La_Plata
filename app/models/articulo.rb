@@ -1,4 +1,4 @@
 class Articulo < ActiveRecord::Base
       belongs_to :autor
-      drop_table 'articulos_categorias'
+      has_and_belongs_to_many :categories	
 end
