@@ -19,6 +19,22 @@
     <%= f.label :cuerpo %><br />
     <%= f.text_area :cuerpo %>
   </div>
+
+  <p>Categorias
+  <% for categoria in Categorium.find(:all) %>
+    <div>
+       <%=  categoria.nombre %> <br>
+       <%=  @articulo.titulo %> <br>
+       <%=  @articulo.id %> <br>
+       <%=  @articulo.autor.nombre %> <br>
+       <%=  @articulo.categoria%> <br>
+
+   </div>
+  <% end %>
+  </p>
+
+
+ 
   <div class="actions">
     <%= f.submit "Crear articulo" %>
   </div>
