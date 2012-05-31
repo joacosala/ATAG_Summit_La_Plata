@@ -6,6 +6,11 @@
 	<p id="fecha"><%= articulo.created_at.strftime("%A, %h %d %Y, %H:%M hs") %></p>
 	<p id="titulo"><%= articulo.titulo %></p>
 	<p><%= articulo.cuerpo %></p><br />
+        <p id="categorias">
+		<% articulo.categories.each do |c| %>
+		<%= c.nombre %> 
+		<% end %>		
+	</p>
 	<p id="acciones">
           <%= link_to 'Ver', articulo %> |
 	  <%= link_to 'Editar', edit_articulo_path(articulo) %> |

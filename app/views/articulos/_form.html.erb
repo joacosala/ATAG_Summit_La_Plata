@@ -21,20 +21,16 @@
   </div>
 
   <p>Categorias
-  <% for categoria in Categorium.find(:all) %>
+    <% for category in Category.find(:all) %>
     <div>
-       <%=  categoria.nombre %> <br>
-       <%=  @articulo.titulo %> <br>
-       <%=  @articulo.id %> <br>
-       <%=  @articulo.autor.nombre %> <br>
-       <%=  @articulo.categoria%> <br>
-
-   </div>
-  <% end %>
+     <%= check_box_tag "article[category_ids][]", category.id,   
+     @articulo.categories.include?(category) %>
+     <%= category.nombre %>
+    </div>
+    <% end %>
   </p>
 
 
- 
   <div class="actions">
     <%= f.submit "Crear articulo" %>
   </div>
