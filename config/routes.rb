@@ -1,5 +1,7 @@
 ATAGSummitJS::Application.routes.draw do
 
+  resources :categoria
+
   get "home/index"
 
   get "login" => "login#login"
