@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def show
    @articulo = Articulo.find(params[:id])
+   @comentario = Comentario.new
    respond_to do |format|
     format.html # show.html.erb
     format.json { render json: @articulo }

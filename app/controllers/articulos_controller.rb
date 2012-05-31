@@ -84,4 +84,14 @@ class ArticulosController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  def add_comment
+	@comentario = Comentario.new(params[:comentario])
+	@comentario.articulo_id = params[:articulo_id]
+        if @comentario.save
+	  redirect_to :controller => "home",
+          :action => "show", :id => @comentario.articulo_id
+	end
+  end
+ 
 end

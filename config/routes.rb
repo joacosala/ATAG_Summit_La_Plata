@@ -13,6 +13,7 @@ ATAGSummitJS::Application.routes.draw do
   root :to => "home#index"
   get "salir" => "login#salir"
   get "show" => "home#show"
+  post "add_comment" => "articulos#add_comment"
 
   resources :autores
   resources :articulos
