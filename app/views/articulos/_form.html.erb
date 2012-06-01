@@ -31,7 +31,18 @@
   </p>
 
 
+<p>
+<%= hidden_field_tag :comment_ids_before_edition, @comment_ids_before_edition %>
+<%= "Comentarios" if @articulo.comentarios.count > 0 %>
+<% for comentario in @articulo.comentarios %>
+  <div>
+  <%= "#{comentario.comentarista}: '#{comentario.cuerpo}'" %>
+  - [<%= check_box_tag "articulo[comentario_ids][]", comentario.id, false %>  Remove ]
+  </div>
+<% end %>
+</p>
+
   <div class="actions">
-    <%= f.submit "Crear articulo" %>
+    <%= f.submit "Aceptar" %>
   </div>
 <% end %>
