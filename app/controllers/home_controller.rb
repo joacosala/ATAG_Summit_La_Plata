@@ -12,5 +12,12 @@ class HomeController < ApplicationController
    end
   end
 
+  private
+  def save_hit article_id
+    @hit = Hit.new(:articulo_id => articulo_id, :autor_id => 0)
+     #author_id equals 0 means a hit from a guest
+     @hit.autor_id = session[:autor_id] if session[:autor_id]
+     @hit.save
+  end
 
 end

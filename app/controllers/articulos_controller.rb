@@ -97,7 +97,7 @@ class ArticulosController < ApplicationController
 	@comentario = Comentario.new(params[:comentario])
 	@comentario.articulo_id = params[:articulo_id]
         if @comentario.save
-	   redirect_to :controller => "home", :action => "show", :id => @comentario.article_id
+	   redirect_to :controller => "home", :action => "show", :id => @comentario.articulo_id
 	else
 	   redirect_to :back, :notice => "No se puede agregar su comentario,  
                    dado que el nombre y contenido son requeridos" 
