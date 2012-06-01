@@ -6,6 +6,11 @@
 	<p id="fecha"><%= articulo.created_at.strftime("%A, %h %d %Y, %H:%M hs") %></p>
 	<p id="titulo"><%= articulo.titulo %></p>
 	<p><%= articulo.cuerpo %></p><br />
+
+        <p id="comentarios">
+        <%= "#{articulo.comentarios.count} comments on this article" if (articulo.comentarios.count > 0) %></p>
+        <p id="comentarios"><%= "No comments on this article" if (articulo.comentarios.count == 0) %></p>
+
         <p id="categorias">
 		<% articulo.categories.each do |c| %>
 		<%= c.nombre %> 

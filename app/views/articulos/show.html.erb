@@ -18,5 +18,13 @@
 </p>
 
 
+<p>
+<b><%= "Comentarios:" if @articulo.comentarios.count > 0 %></b><br/>
+<% @articulo.comentarios.each do |c| %>
+<%= "[#{c.comentarista}] #{c.cuerpo}" %><br/>
+<% end %>
+</p>
+
+
 <%= link_to 'Editar', edit_articulo_path(@articulo) %> |
 <%= link_to 'Volver', articulos_path %>
