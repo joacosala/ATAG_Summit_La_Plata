@@ -7,6 +7,8 @@
  <p id="titulo"><%= articulo.titulo %></p>
  <p id="autor"><%= get_formato_autor articulo %></p>
  <p><%= articulo.cuerpo[0..140] %>...</p>
+ <p id="autor"><%= "#{articulo.hits.count} Visitas"%></p>
+
  <p id="readmore"><%= link_to "Seguir leyendo...", :controller => "home", :action => "show", :id => articulo.id %></p>
 
 
